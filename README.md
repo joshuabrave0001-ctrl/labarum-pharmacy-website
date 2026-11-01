@@ -1,2 +1,2 @@
-# labarum-pharmacy-website
+# labarum-pharmacy-limited.com
 Official website of Labarum Pharmacy Limited
