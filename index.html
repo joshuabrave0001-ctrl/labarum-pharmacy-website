@@ -349,6 +349,15 @@ onAuthStateChanged(auth, async user => {
     const adminRef = doc(db, "admins", user.uid);
     const adminSnap = await getDoc(adminRef);
 
+const adminData = adminSnap.data();
+
+alert(
+  "Admin Check:\n" +
+  "UID: " + user.uid + "\n" +
+  "Document exists: " + adminSnap.exists() + "\n" +
+  "Role: " + JSON.stringify(adminData?.role) + "\n" +
+  "Active: " + JSON.stringify(adminData?.active)
+);
     if (!adminSnap.exists() ||
         adminSnap.data().role !== "admin" ||
         adminSnap.data().active !== true) {
